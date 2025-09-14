@@ -1,0 +1,25 @@
+$(function() {  
+      $("#click_id").click(function(){
+  //クリックイベント処理：$("#click_id").click() でボタンクリックに反応
+    alert("クリック");
+  });
+ 
+  $("#check_id").click(function(){
+    var name = $("#name_id").val();
+    //値の取得：$("#name_id").val() で inputの値を取得
+ 
+    if(name === ""){
+      alert("名前が入力されておりません");
+    } else {
+      $("#write").html(name);
+      //html()プロパティは、指定した要素の中身（タグとタグで囲まれた部分）を操作するために使います。
+      alert("入力された名前は" + name + "です");
+    }
+  });
+ 
+    $('#area').hover(function() {    
+        $('#area').css('background-color', "#808080");
+    }, function() {    
+        $('#area').css('background-color', "#46f2d2");
+    });
+});
